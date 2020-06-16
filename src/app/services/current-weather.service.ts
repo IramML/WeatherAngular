@@ -44,8 +44,9 @@ export class CurrentWeatherService {
     let args:string=`?lat=${coords.lat}&lon=${coords.lon}&appid=${environment.key}&units=metric`;
     let url =this.endpoint+args;
 
+    /*
     if(isDevMode)
-      url='assets/weather.json';
+      url='assets/weather.json';*/
     
     let observable = this.http.get(url).subscribe(this.weatherSubject);   
   }
